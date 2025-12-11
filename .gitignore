@@ -1,0 +1,23 @@
+# --- Data Exclusion ---
+# Jupyter Notebooks
+.ipynb_checkpoints/
+
+# Python compiled files
+__pycache__/
+*.pyc
+
+# Your Data (as discussed)
+KaggleCache/
+
+# Alternatively, if you sometimes move data around, standard convention 
+# is to keep all data in a 'data/' folder and ignore that:
+data/
+dataset/
+datasets/
+
+# --- File Specific ---
+# Ignore large compressed files just in case they end up elsewhere
+*.zip
+*.tar.gz
+*.csv
+# !full_df.csv  # (Optional) Exception: Keep the CSV if it's small and necessary for the code to run
