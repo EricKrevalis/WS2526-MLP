@@ -1,4 +1,4 @@
-# WS2526-MLP
+# WS2526-MLP Notes
 
 ## Datensätze
 
