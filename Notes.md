@@ -1,4 +1,4 @@
-# WS2526-MLP Notes
+# WiSe 25/26 Machine Learning Praktikum - Notizen & Fragen
 
 ## Datensätze
 
@@ -9,7 +9,6 @@
 
 ## Fragen & Notizen
 ### 28.11.25
-
 * ODIR5K Originalbilder sind sehr groß (z.B. 2300 x 1700) -> Preprocessed Bilder nehmen (512 x 512) oder selbst eine Preprocessing Pipeline implementieren?
     * Dürfen gepreprocesseste benutzen
 * XAI (Grad-CAM)? -> Kann man am Ende einfügen wenn schon was vorliegt
@@ -20,10 +19,19 @@
 * Trainingsdaten aggregieren
 
 ### 12.12.25
-
 * DataLoader zur Verwaltung (Umgang mit großen Datenmengen, aber eben ohne alle im Speicher zu halten)
 * Daten nach Transformation prüfen (z.B. Rotation um 15°)
     * Durch die Transformationen können wir die seltenen Klassen hochsetzen, indem sie häufiger gesampled werden
 * Pooling bei den 512x512 Bildern: eher gleichmäßig reduzieren als mehr anfangs oder mehr am Ende
 * Gute Resolution ist die die so klein ist dass es noch genau genug erkannt wird (vllt bisschen plus für Puffer)
 * Als nächstes ein vortrainiertes Netz (z.B. resnet) voranstellen und dann (mit eigenem Netz?) finetunen; Peer: “den Head mit eigenen Schichten austauschen”
+
+### 19.12.25
+* GANs oder Diffusion Netze einsetzen?
+    * Ja, erstmal GAN
+    * Vllt danach Diffusion
+* Linke und rechte Augen separat trainieren?
+    * Ja: z.B. nur auf linke Augen trainieren und die rechten spiegeln
+    * One Hot Encoded: (binär) 10 und 01
+    * Achtung: kann zu Overfitting führen
+* Benchmarks anschauen
