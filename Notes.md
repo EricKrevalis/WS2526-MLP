@@ -35,3 +35,20 @@
     * One Hot Encoded: (binär) 10 und 01
     * Achtung: kann zu Overfitting führen
 * Benchmarks anschauen
+
+### 09.01.26
+* Hypertension 0 erkannt: zusätzlich zu den Class Weights die seltenen Krankheiten vorher duplizieren (leichte Verschiebung und/oder Rotation um 5°; bei Verschiebung aber gucken wie sinnvoll das ist, wenn die preproccesden eig alle mittig sein sollten) -> auf Größe 100 bringen
+* Hierarchisches Labeling
+    * z.B. Glaucoma und Normal zusammenbringen und dann im 2. Schritt das nochmal unterscheiden (in Kiwan_TestModel_v03 wurde Glaucoma z.B. 17 mal richtig und 20 mal normal zugewiesen)
+* Wie ist das nochmal mit den Patienten?? in csv 2 Einträge pro Patient aber 1 Patient kann auch auf beiden Augen eine jeweils andere Krankheit haben UND einzelne Augen die selbst mehrere Krankheiten haben
+    * dann statt 1-of-n eine m-of-n-Klassifikation
+        * dann z.B. 7 statt 8 Ausgänge (ohne Normal, nur die Krankheiten) -> Normal kriegt dann Label 0 und die Krankheiten irgendwo eine 1 (+ weiteres für spezifische Krankheit??) und die können dann auch beinhalten, dass ein Auge mehrere Krankheiten hat??
+
+Vorschläge zum Umgang mit der Ungleichheit (auch mögliche Themen für die Hausarbeit):
+* Class Weights
+* Data Augmentation
+* Oversampling (seltene duplizieren)
+* Andere Loss Funktionen, die die Häufigkeit besser abdecken (z.B. Focal Loss)
+* Partial Labeling, hierarchische Segmentierung
+* Die häufigsten (Normal und Diabetic) rausnehmen und schauen wie gut der Rest dann funktioniert?
+* Kombination/Vergleich der Ansätze
