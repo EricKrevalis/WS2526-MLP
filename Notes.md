@@ -52,3 +52,6 @@ Vorschläge zum Umgang mit der Ungleichheit (auch mögliche Themen für die Haus
 * Partial Labeling, hierarchische Segmentierung
 * Die häufigsten (Normal und Diabetic) rausnehmen und schauen wie gut der Rest dann funktioniert?
 * Kombination/Vergleich der Ansätze
+
+### 16.01.26
+* Ergänzend (wieder erinnert): Andere preprocessede Bilder zu ODIR5K probieren (siehe Links oben)
